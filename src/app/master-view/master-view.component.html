@@ -1,0 +1,73 @@
+<form (ngSubmit)="ngSubmitCustomerDto()" [formGroup]="customerDtoFormModel" (reset)="resetCustomerDto($event)" class="column-layout form">
+  <h6>
+    Add Customers
+  </h6>
+  <div class="column-layout form_fields">
+    <igx-input-group type="border">
+      <input type="text" igxInput formControlName="customerId" />
+      <label igxLabel>customerId</label>
+    </igx-input-group>
+    <igx-input-group type="border">
+      <input type="text" required igxInput formControlName="companyName" />
+      <label igxLabel>companyName</label>
+    </igx-input-group>
+    <igx-input-group type="border">
+      <input type="text" igxInput formControlName="contactName" />
+      <label igxLabel>contactName</label>
+    </igx-input-group>
+    <igx-input-group type="border">
+      <input type="text" igxInput formControlName="contactTitle" />
+      <label igxLabel>contactTitle</label>
+    </igx-input-group>
+    <ng-container formGroupName="address">
+      <igx-input-group type="border">
+        <input type="text" igxInput formControlName="street" />
+        <label igxLabel>address.street</label>
+      </igx-input-group>
+    </ng-container>
+    <ng-container formGroupName="address">
+      <igx-input-group type="border">
+        <input type="text" igxInput formControlName="city" />
+        <label igxLabel>address.city</label>
+      </igx-input-group>
+    </ng-container>
+    <ng-container formGroupName="address">
+      <igx-input-group type="border">
+        <input type="text" igxInput formControlName="region" />
+        <label igxLabel>address.region</label>
+      </igx-input-group>
+    </ng-container>
+    <ng-container formGroupName="address">
+      <igx-input-group type="border">
+        <input type="text" igxInput formControlName="postalCode" />
+        <label igxLabel>address.postalCode</label>
+      </igx-input-group>
+    </ng-container>
+    <ng-container formGroupName="address">
+      <igx-input-group type="border">
+        <input type="text" required igxInput formControlName="country" />
+        <label igxLabel>address.country</label>
+      </igx-input-group>
+    </ng-container>
+    <ng-container formGroupName="address">
+      <igx-input-group type="border">
+        <input type="text" igxInput formControlName="phone" />
+        <label igxLabel>address.phone</label>
+      </igx-input-group>
+    </ng-container>
+  </div>
+  <div class="row-layout actions">
+    <button igxButton="outlined" type="reset" igxRipple class="button">
+      Reset
+    </button>
+    <button igxButton="contained" type="submit" igxRipple class="button">
+      Add
+    </button>
+  </div>
+  <igx-snackbar actionText="OK" (clicked)="snackbarsuccess.toggle()" #snackbarsuccess>
+    Your new submission was saved successfully!
+  </igx-snackbar>
+  <igx-snackbar actionText="OK" (clicked)="snackbarerror.toggle()" #snackbarerror>
+    Uh-oh! Something went wrong.
+  </igx-snackbar>
+</form>
