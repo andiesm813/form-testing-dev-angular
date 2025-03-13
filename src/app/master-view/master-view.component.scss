@@ -16,8 +16,10 @@
   gap: 16px;
   position: relative;
   padding: 24px;
+  height: 475px;
   min-width: 50px;
   min-height: 50px;
+  max-height: 475px;
   flex-shrink: 0;
 }
 .button {
