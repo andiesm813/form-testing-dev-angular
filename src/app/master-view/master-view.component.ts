@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { IGX_INPUT_GROUP_DIRECTIVES, IgxButtonDirective, IgxRippleDirective, IgxSnackbarComponent } from '@infragistics/igniteui-angular';
+import { IGX_INPUT_GROUP_DIRECTIVES, IgxButtonDirective, IgxRippleDirective, IgxSnackbarComponent } from 'igniteui-angular';
 import { firstValueFrom } from 'rxjs';
 import { CustomerDtoForm } from '../models/northwind-swagger/customer-dto-forms';
 import { CustomerDto } from '../models/northwind-swagger/customer-dto';
