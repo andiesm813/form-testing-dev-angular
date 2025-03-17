@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
-import { IGX_INPUT_GROUP_DIRECTIVES, IgxButtonDirective, IgxRippleDirective, IgxSnackbarComponent } from 'igniteui-angular';
+import { IGX_INPUT_GROUP_DIRECTIVES, IgxButtonDirective, IgxRippleDirective, IgxSnackbarComponent, IGX_LIST_DIRECTIVES, IgxAvatarComponent, IgxIconComponent, IgxRadioComponent, IgxRadioGroupDirective } from 'igniteui-angular';
 import { MasterViewComponent } from './master-view.component';
 
 describe('MasterViewComponent', () => {
@@ -12,7 +12,7 @@ describe('MasterViewComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MasterViewComponent, NoopAnimationsModule, FormsModule, HttpClientTestingModule, IGX_INPUT_GROUP_DIRECTIVES, IgxButtonDirective, IgxRippleDirective, IgxSnackbarComponent]
+      imports: [MasterViewComponent, NoopAnimationsModule, FormsModule, HttpClientTestingModule, IGX_INPUT_GROUP_DIRECTIVES, IgxButtonDirective, IgxRippleDirective, IgxSnackbarComponent, IGX_LIST_DIRECTIVES, IgxAvatarComponent, IgxIconComponent, IgxRadioComponent, IgxRadioGroupDirective]
     })
     .compileComponents();
 
