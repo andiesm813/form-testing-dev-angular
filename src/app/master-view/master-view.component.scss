@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   align-content: flex-start;
+  gap: 24px;
 }
 .column-layout {
   display: flex;
@@ -16,15 +17,32 @@
   gap: 16px;
   position: relative;
   padding: 24px;
-  height: 475px;
+  height: 480px;
   min-width: 50px;
   min-height: 50px;
-  max-height: 475px;
+  max-height: 480px;
   flex-shrink: 0;
 }
 .button {
   --ig-size: var(--ig-size-medium);
   flex-shrink: 0;
+}
+.button_1 {
+  --ig-size: var(--ig-size-medium);
+  height: max-content;
+}
+.radio-group {
+  width: max-content;
+  height: max-content;
+}
+.avatar {
+  --ig-size: var(--ig-size-small);
+}
+.icon {
+  --size: 24px;
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
 }
 .form_fields {
   justify-content: flex-start;
@@ -45,4 +63,14 @@
   gap: 16px;
   overflow: hidden;
   flex-shrink: 0;
+}
+.group {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 24px;
+  position: relative;
+}
+.list {
+  height: max-content;
 }

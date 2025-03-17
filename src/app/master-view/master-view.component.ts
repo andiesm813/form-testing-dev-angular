@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { IGX_INPUT_GROUP_DIRECTIVES, IgxButtonDirective, IgxRippleDirective, IgxSnackbarComponent } from 'igniteui-angular';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { IGX_INPUT_GROUP_DIRECTIVES, IGX_LIST_DIRECTIVES, IgxAvatarComponent, IgxButtonDirective, IgxIconComponent, IgxRadioComponent, IgxRadioGroupDirective, IgxRippleDirective, IgxSnackbarComponent } from 'igniteui-angular';
 import { firstValueFrom } from 'rxjs';
 import { CustomerDtoForm } from '../models/northwind-swagger/customer-dto-forms';
 import { CustomerDto } from '../models/northwind-swagger/customer-dto';
@@ -8,12 +8,13 @@ import { NorthwindSwaggerService } from '../services/northwind-swagger.service';
 
 @Component({
   selector: 'app-master-view',
-  imports: [IGX_INPUT_GROUP_DIRECTIVES, IgxButtonDirective, IgxRippleDirective, IgxSnackbarComponent, ReactiveFormsModule],
+  imports: [IGX_INPUT_GROUP_DIRECTIVES, IGX_LIST_DIRECTIVES, IgxRadioGroupDirective, IgxButtonDirective, IgxRippleDirective, IgxSnackbarComponent, IgxAvatarComponent, IgxIconComponent, IgxRadioComponent, ReactiveFormsModule, FormsModule],
   templateUrl: './master-view.component.html',
   styleUrls: ['./master-view.component.scss']
 })
 export class MasterViewComponent {
   public customerDtoFormModel: FormGroup<CustomerDtoForm>;
+  public value: string = '1';
 
   constructor(
     private northwindSwaggerService: NorthwindSwaggerService,
